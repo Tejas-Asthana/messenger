@@ -71,7 +71,11 @@ export const registerUser =
     // console.log(body);
 
     axios
-      .post("http://localhost:5000/api/auth/register", body, config)
+      .post(
+        "https://msnger-bcknd.herokuapp.com/api/auth/register",
+        body,
+        config
+      )
       .then((res) => {
         dispatch({
           type: REGISTER_SUCCESS,
@@ -104,7 +108,7 @@ export const loginUser =
     // console.log(body);
 
     axios
-      .post("http://localhost:5000/api/auth/login", body, config)
+      .post("https://msnger-bcknd.herokuapp.com/api/auth/login", body, config)
       .then((res) => {
         dispatch({
           type: LOGIN_SUCCESS,

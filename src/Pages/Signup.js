@@ -21,7 +21,7 @@ function Signup(props) {
   // will run after every time component's state is changed
   useEffect(() => {
     if (props.error.id === REGISTER_FAIL) {
-      setErrorMsg(props.error.msg.msg);
+      setErrorMsg(props.error?.msg?.msg);
     } else setErrorMsg("");
   });
 
