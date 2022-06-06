@@ -19,11 +19,11 @@ function Login(props) {
   //   props.loadUser();
   // }, []);
 
-  useEffect(() => {
-    if (props.error.id === LOGIN_FAIL) {
-      setErrorMsg(props.error.msg.msg);
-    } else setErrorMsg("");
-  });
+  // useEffect(() => {
+  //   if (props.error.id === LOGIN_FAIL) {
+  //     setErrorMsg(props?.error?.msg?.msg);
+  //   } else setErrorMsg("");
+  // });
 
   function handleChange(e) {
     e.preventDefault();

@@ -71,11 +71,7 @@ export const registerUser =
     // console.log(body);
 
     axios
-      .post(
-        "https://msnger-bcknd.herokuapp.com/api/auth/register",
-        body,
-        config
-      )
+      .post("http://localhost:5000/api/auth/register", body, config)
       .then((res) => {
         dispatch({
           type: REGISTER_SUCCESS,
@@ -85,7 +81,7 @@ export const registerUser =
         // console.log(res.data);
       })
       .catch((err) => {
-        // console.log(body);
+        console.log(body, err);
         dispatch(
           returnErrors(err.response?.data, err.response?.status, REGISTER_FAIL)
         );
@@ -108,19 +104,19 @@ export const loginUser =
     // console.log(body);
 
     axios
-      .post("https://msnger-bcknd.herokuapp.com/api/auth/login", body, config)
+      .post("http://localhost:5000/api/auth/login", body, config)
       .then((res) => {
         dispatch({
           type: LOGIN_SUCCESS,
           payload: res.data,
         });
-        history.push("/" + url);
+        history.push("/");
         console.log(res.data);
       })
       .catch((err) => {
         console.log(body);
         dispatch(
-          returnErrors(err.response.data, err.response.status, LOGIN_FAIL)
+          returnErrors(err.response?.data, err.response?.status, LOGIN_FAIL)
         );
         dispatch({ type: LOGIN_FAIL });
       });

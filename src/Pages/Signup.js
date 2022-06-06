@@ -44,9 +44,11 @@ function Signup(props) {
       e.preventDefault(); // will prevent from page to reload
 
       // attempt to register a user
-      props.registerUser(signupData, props.history, "login");
+      props.registerUser(signupData, props.history, "");
       // clear all the errors after register
       props.clearErrors();
+      props.history.push("/");
+
       // console.log(props.error);
     } catch (err) {
       throw ("Here's what went wrong: ", err);
