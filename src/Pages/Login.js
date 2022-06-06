@@ -56,7 +56,7 @@ function Login(props) {
           </div>
         ) : null}
         <Forms
-          action="https://msnger-bcknd.herokuapp.com/api/auth/register"
+          action="https://msnger-bcknd.herokuapp.com/api/auth/login"
           method="POST"
           username={{ show: false, isRequired: false }}
           email={{ show: true, value: loginData.email, isRequired: true }}

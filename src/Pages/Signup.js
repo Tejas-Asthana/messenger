@@ -69,7 +69,7 @@ function Signup(props) {
           </div>
         ) : null}
         <Forms
-          action="https://msnger-bcknd.herokuapp.com/api/registerUser"
+          action="https://msnger-bcknd.herokuapp.com/api/auth/register"
           method="POST"
           username={{
             show: true,
