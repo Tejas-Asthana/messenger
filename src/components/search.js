@@ -92,7 +92,7 @@ function Search(props) {
           type="text"
           className="searchbar"
           value={searchVal}
-          onChange={(e) => setsearchVal(e.target.value)}
+          onChange={(e) => setsearchVal(e.target.value.toLowerCase())}
           placeholder="Search your friends by username"
         />
       </div>

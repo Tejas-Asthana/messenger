@@ -67,7 +67,11 @@ export const registerUser =
     };
 
     // req body
-    const body = JSON.stringify({ username, email, password });
+    const body = JSON.stringify({
+      username: username.toLowerCase(),
+      email: email.toLowerCase(),
+      password: password.toLowerCase(),
+    });
     // console.log(body);
 
     axios
@@ -104,7 +108,10 @@ export const loginUser =
     };
 
     // req body
-    const body = JSON.stringify({ email, password });
+    const body = JSON.stringify({
+      email: email.toLowerCase(),
+      password: password.toLowerCase(),
+    });
     // console.log(body);
 
     axios
