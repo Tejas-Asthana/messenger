@@ -5,7 +5,7 @@ function Forms(props) {
     <form method={props.method} action={props.action}>
       <div
         style={{ display: props.username.show ? "block" : "none" }}
-        className="form-group"
+        className="form-group text-white"
       >
         <label htmlFor="username">Username</label>
         <input
@@ -20,7 +20,7 @@ function Forms(props) {
       </div>
       <div
         style={{ display: props.email.show ? "block" : "none" }}
-        className="form-group"
+        className="form-group text-white"
       >
         <label htmlFor="email">Email address</label>
         <input
@@ -39,7 +39,7 @@ function Forms(props) {
       </div>
       <div
         style={{ display: props.password.show ? "block" : "none" }}
-        className="form-group"
+        className="form-group text-white"
       >
         <label htmlFor="password">Password</label>
         <input
@@ -52,7 +52,7 @@ function Forms(props) {
           required={props.password.isRequired}
         />
       </div>
-      <div
+      {/* <div
         style={{ display: props.checkbox.show ? "block" : "none" }}
         className="form-group form-check"
       >
@@ -60,7 +60,7 @@ function Forms(props) {
         <label className="form-check-label" htmlFor="remember">
           Check me out
         </label>
-      </div>
+      </div> */}
       <button
         onClick={(e) => props.handleSubmitMethod(e)}
         type="submit"
